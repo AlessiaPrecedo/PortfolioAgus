@@ -3,64 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="../main.js" defer></script>
     <title>Acerca de mi</title>
 </head>
 <body>
     <main>
 <header>
-<nav class="navbar">
-<h1>Portfolio</h1>
-
-<button class="hamburger" id="hamburger">
-    ☰
-</button>
-
-<ul class="nav-links" id="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../pages/Contac.html">Contacto</a></li>
-    <li><a href="../pages/About.html">Acerca de mi</a></li>
-    <li><a href="../pages/Experiencia.html">Experiencia Laboral</a></li>
-</ul>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/Contac.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/About.html">Acerca de mi</a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link" href="../pages/Experiencia.html">Experiencia Laboral</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 </header>
-<section class="content">
-  <h2>Acerca de mi</h2>
-<div class="about-perfil">
-  
-  <!-- BLOQUE ACERCA DE MÍ -->
-  <div class="conteAbout">
-    <p>
-      <span>Soy una persona con buenas relaciones interpersonales,</span>
-      <span>lo que me permite trabajar en equipo de manera efectiva y generar un clima positivo.</span>
-      <span>Me destaco por mi dinamismo, responsabilidad y perseverancia,</span>
-      <span>cualidades que aplico en cada proyecto que asumo.</span>
-      <span>Cuento con una sólida capacidad resolutiva,</span>
-      <span>pudiendo afrontar desafíos con rapidez y criterio.</span>
-      <span>Además, tengo una marcada organización y gestión,</span>
-      <span>lo que me ayuda a optimizar tareas, priorizar y alcanzar objetivos de manera eficiente.</span>
-    </p>
-  </div>
+<section class="content py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
 
-  <!-- BLOQUE PERFIL -->
-  <div class="perfil">
-    <strong>Perfil</strong>
-    <ul>
-      <li>Edad: 28 años.</li>
-      <li>Nacimiento: 16/02/1997</li>
-      <li>Provincia y Localidad: Lanús Oeste, Buenos Aires</li>
-      <li>Nacionalidad: Argentina</li>
-    </ul>
+      <!-- FOTO + TÍTULO -->
+      <div class="col-md-4 text-center">
+        <h2 class="mb-3">Acerca de mí</h2>
+        <img src="../images/agus1.jpg" alt="Foto Agustina" class="img-fluid rounded shadow imgAbout">
+      </div>
+
+      <!-- TEXTO + PERFIL -->
+      <div class="col-md-8">
+
+        <!-- DESCRIPCIÓN -->
+        <div class="conteAbout mb-4 p-4 rounded shadow-sm bg-light">
+          <p>
+            <span>Soy una persona con buenas relaciones interpersonales,</span>
+            <span>lo que me permite trabajar en equipo de manera efectiva y generar un clima positivo.</span>
+            <span>Me destaco por mi dinamismo, responsabilidad y perseverancia,</span>
+            <span>cualidades que aplico en cada proyecto que asumo.</span>
+            <span>Cuento con una sólida capacidad resolutiva,</span>
+            <span>pudiendo afrontar desafíos con rapidez y criterio.</span>
+            <span>Además, tengo una marcada organización y gestión,</span>
+            <span>lo que me ayuda a optimizar tareas, priorizar y alcanzar objetivos de manera eficiente.</span>
+          </p>
+        </div>
+
+        <!-- PERFIL -->
+        <div class="perfil p-4 rounded shadow-sm">
+          <strong class="d-block mb-2">Perfil</strong>
+          <ul class="perfil-list">
+            <li>Edad: 28 años.</li>
+            <li>Nacimiento: 16/02/1997</li>
+            <li>Provincia y Localidad: Lanús Oeste, Buenos Aires</li>
+            <li>Nacionalidad: Argentina</li>
+          </ul>
+        </div>
+         <div class="perfil p-4 rounded shadow-sm">
+          <strong class="d-block mb-2">Formacion academica</strong>
+          <ul class="perfil-list">
+            <li>Marzo 2009 - Diciembre 2014</li>
+            <Strong>E.E.S N° 16 - Lanus.</Strong>
+            <p>Bachiller en economia y gestion de las organizaciones.</p>
+            <li>Marzo 2019 - Actualidad</li>
+            <Strong>Universidad Nacional de Avellaneda</Strong>
+            <p>Licenciatura en actividad fisica y deporte.</p>
+            <li><strong>Idioma</strong></li>
+            <p>Ingles basico</p>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
   </div>
+</section>
+
+<footer class="footer mt-5 py-4">
+  <div class="container text-center">
+
+    <p class="footer-name mb-1">Agustina Gómez</p>
+
+    <div class="footer-contact mb-2">
+      <p class="mb-0">📧 
+        <a href="mailto:Gomezagustina_14@hotmail.com">
+          Gomezagustina_14@hotmail.com
+        </a>
+      </p>
+      <p class="mb-0">📱 
+        <a href="tel:+541166930342">11 6693-0342</a>
+      </p>
+      <p class="mb-0">📍 Lanús Oeste, Buenos Aires</p>
+    </div>
+
+    <p class="footer-copy mt-3">
+      © 2025 • Portfolio creado por Alessia Precedo
+    </p>
+
+  </div>
+</footer>
+
+
+    </main> 
+    <!-- BOTONES FLOTANTES -->
+<div class="floating-buttons">
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/541166930342" target="_blank" class="float-wsp">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:Gomezagustina_14@hotmail.com" class="float-mail">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+  </a>
 
 </div>
 
-</section>
-<footer>
-    
-</footer>
-
-    </main> 
 </body>
 </html>

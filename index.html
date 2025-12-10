@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-     <link rel="stylesheet" href="style.css">
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
     <title>Portfolio</title>
 </head>
 <body>
     <main>
         <header>
-<nav class="navbar">
-    <h1>Portfolio</h1>
-
-<button class="hamburger" id="hamburger">
-    ☰
-</button>
-
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/Contac.html">Contacto</a></li>
-        <li><a href="pages/About.html">Acerca de mi</a></li>
-        <li><a href="pages/Experiencia.html">Experiencia Laboral</a></li>
-    </ul>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/Contac.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/About.html">Acerca de mi</a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link" href="pages/Experiencia.html">Experiencia Laboral</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
     </header>
 <Section>
@@ -63,9 +73,45 @@
 </aside>
 </div>
 </Section>
-<footer>
+<footer class="footer mt-5 py-4">
+  <div class="container text-center">
 
+    <p class="footer-name mb-1">Agustina Gómez</p>
+
+    <div class="footer-contact mb-2">
+      <p class="mb-0">📧 
+        <a href="mailto:Gomezagustina_14@hotmail.com">
+          Gomezagustina_14@hotmail.com
+        </a>
+      </p>
+      <p class="mb-0">📱 
+        <a href="tel:+541166930342">11 6693-0342</a>
+      </p>
+      <p class="mb-0">📍 Lanús Oeste, Buenos Aires</p>
+    </div>
+
+    <p class="footer-copy mt-3">
+      © 2025 • Portfolio creado por Alessia Precedo
+    </p>
+
+  </div>
 </footer>
+
     </main>
+    <!-- BOTONES FLOTANTES -->
+<div class="floating-buttons">
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/541166930342" target="_blank" class="float-wsp">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:Gomezagustina_14@hotmail.com" class="float-mail">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+  </a>
+
+</div>
+
 </body>
 </html>

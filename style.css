@@ -9,290 +9,389 @@ body {
   color: #333;
 
 }
+/*Index*/
+/* ===== PALETA ===== */
+:root {
+  --rosa: #fca6f9;
+  --violeta: #861e82;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
+  background-color: var(--violeta) !important;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--rosa) !important;
+}
+
+/* ===== TITULO ===== */
+h2 {
+  color: var(--violeta);
+  text-align: center;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
+/* ===== BLOQUE CENTRAL ===== */
+.bloque {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #222;
-  color: white;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
 }
 
-.navbar h1 {
-  margin: 0;
+/* ===== CARRUSEL CON BOOTSTRAP ===== */
+.caja-carrusel {
+  width: 320px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* LISTA NORMAL */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.carousel-item img {
+  border-radius: 15px;
+  object-fit: cover;
+  height: 260px;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/*Experiencia laboral*/
-
-
-.content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-h2{
-
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-.contenedor{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* ===== SKILLS ===== */
+.skills {
+  background-color: white;
   padding: 20px;
-  background-color: rgb(170, 29, 166);
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background-color: var(--rosa);
+  color: var(--violeta);
+  padding: 10px 14px;
+  margin-bottom: 12px;
   border-radius: 12px;
-  width: 500px;
-  margin: 20px;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
 }
-.btn{
+
+/* Animación en cascada */
+.skills li:nth-child(1) { animation-delay: .2s; }
+.skills li:nth-child(2) { animation-delay: .4s; }
+.skills li:nth-child(3) { animation-delay: .6s; }
+
+/* Keyframes */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .caja-carrusel,
+  .skills {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+
+/* ===== PALETA ===== */
+:root {
+  --rosa: #fca6f9;
+  --violeta: #861e82;
+}
+
+/* ===== TITULO ===== */
+h2 {
+  text-align: center;
+  color: var(--violeta);
+  font-weight: 800;
+  margin: 40px 0;
+}
+
+/* ===== CONTENEDOR GENERAL ===== */
+.content .contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ===== ÍTEM / CARD ===== */
+.item {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  border-left: 10px solid var(--violeta);
+  animation: fadeSlide .7s ease forwards;
+  opacity: 0;
+}
+
+/* Animación en cascada */
+.item:nth-child(1) { animation-delay: .1s; }
+.item:nth-child(2) { animation-delay: .2s; }
+.item:nth-child(3) { animation-delay: .3s; }
+.item:nth-child(4) { animation-delay: .4s; }
+.item:nth-child(5) { animation-delay: .5s; }
+.item:nth-child(6) { animation-delay: .6s; }
+
+/* Animación */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== NOMBRE DEL TRABAJO (BOTÓN) ===== */
+.item .btn {
   width: 100%;
-  padding: 12px;
-  background-color: #fca6f9;
-  border: none;
+  background-color: var(--violeta);
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 15px;
+  transition: transform .2s ease, background-color .2s;
+}
+
+.item .btn:hover {
+  background-color: var(--rosa);
+  color: var(--violeta);
+  transform: scale(1.03);
+}
+
+/* ===== INFO ===== */
+.item strong {
+  display: block;
+  color: var(--violeta);
+  margin-bottom: 10px;
+}
+
+/* ===== LISTA ===== */
+.item ul {
+  padding-left: 18px;
+}
+
+.item li {
+  margin-bottom: 6px;
+  background-color: var(--rosa);
+  color: var(--violeta);
+  padding: 6px 10px;
   border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-align: left;
-  transition: background-color .3s ease;
-}
-
-/* INICIO — info cerrada */
-.info {
+  font-weight: 500;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .6s ease, opacity .6s ease;
-  color : #fff;
+  animation: fadeUpList .6s ease forwards;
 }
 
-/* Cuando el item está abierto */
-.item.active .info {
-  opacity: 1;
-  max-height: 500px; /* podés ajustar */
-  margin-top: 10px;
+.item li:nth-child(1) { animation-delay: .3s; }
+.item li:nth-child(2) { animation-delay: .4s; }
+.item li:nth-child(3) { animation-delay: .5s; }
+.item li:nth-child(4) { animation-delay: .6s; }
+.item li:nth-child(5) { animation-delay: .7s; }
+
+@keyframes fadeUpList {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Animación interna */
-.item.active .info * {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .item {
+    padding: 15px;
+  }
+}
+
+
+/*Acerca de mi*/
+/* --- COLORES PRINCIPALES --- */
+:root {
+  --pink: #fca6f9;
+  --purple: #861e82;
+}
+
+/* --- TITULOS --- */
+h2 {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+/* --- FOTO --- */
+.imgAbout {
+  max-width: 260px;
+  border: 4px solid var(--pink);
+  border-radius: 15px;
+}
+
+/* --- CONTENEDOR DE TEXTO ANIMADO --- */
+.conteAbout span {
+  display: block;
   opacity: 0;
-  transform: translateY(10px);
-  animation: fadeItem .6s ease forwards;
+  transform: translateY(8px);
+  animation: fadeInUp 0.6s forwards;
 }
 
-@keyframes fadeItem {
+.conteAbout span:nth-child(1) { animation-delay: .2s; }
+.conteAbout span:nth-child(2) { animation-delay: .4s; }
+.conteAbout span:nth-child(3) { animation-delay: .6s; }
+.conteAbout span:nth-child(4) { animation-delay: .8s; }
+.conteAbout span:nth-child(5) { animation-delay: 1s; }
+.conteAbout span:nth-child(6) { animation-delay: 1.2s; }
+.conteAbout span:nth-child(7) { animation-delay: 1.4s; }
+
+@keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Delays */
-.item.active .info strong { animation-delay: .2s; }
-.item.active .info li:nth-child(1) { animation-delay: .4s; }
-.item.active .info li:nth-child(2) { animation-delay: .6s; }
-.item.active .info li:nth-child(3) { animation-delay: .8s; }
-.item.active .info li:nth-child(4) { animation-delay: 1s; }
-.item.active .info li:nth-child(5) { animation-delay: 1.2s; }
-
-
-/*Acerca de mi*/
-/* Contenedor general con dos columnas */
-.about-perfil {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 30px;
-  flex-wrap: wrap;   /* se acomoda en mobile */
-}
-
-/* BLOQUE ACERCA DE MI */
-.conteAbout {
-  background-color: #861e82;
-  color: #fff;
-  padding: 20px;
-  width: 350px;
-  border-radius: 12px;
-}
-
-/* Animación de cada línea */
-.conteAbout span {
-  display: block;
-  opacity: 0;
-  transform: translateX(-15px);
-  animation: fadeLines .7s ease forwards;
-}
-
-.conteAbout span:nth-child(1) { animation-delay: .1s; }
-.conteAbout span:nth-child(2) { animation-delay: .2s; }
-.conteAbout span:nth-child(3) { animation-delay: .3s; }
-.conteAbout span:nth-child(4) { animation-delay: .4s; }
-.conteAbout span:nth-child(5) { animation-delay: .5s; }
-.conteAbout span:nth-child(6) { animation-delay: .6s; }
-.conteAbout span:nth-child(7) { animation-delay: .7s; }
-.conteAbout span:nth-child(8) { animation-delay: .8s; }
-
-@keyframes fadeLines {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* BLOQUE PERFIL */
+/* --- PERFIL TARJETA --- */
 .perfil {
-  background: #861e82;
-  padding: 20px;
-  width: 300px;
-  border-radius: 12px;
-  color: #fff;
+  background: var(--pink);
+  border-left: 6px solid var(--purple);
 }
 
-.perfil strong {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-/* Animación de cada li */
-.perfil li {
-  background: #ffffff;
-  padding: 8px 12px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  list-style: none;
+/* --- ANIMACIÓN DE LI --- */
+.perfil-list li {
   opacity: 0;
-  transform: translateX(15px);
-  animation: fadeList .6s ease forwards;
-  color: #333;
+  transform: translateX(-10px);
+  animation: appear 0.5s forwards;
+  margin-bottom: 6px;
 }
 
-.perfil li:nth-child(1) { animation-delay: .3s; }
-.perfil li:nth-child(2) { animation-delay: .5s; }
-.perfil li:nth-child(3) { animation-delay: .7s; }
-.perfil li:nth-child(4) { animation-delay: .9s; }
+.perfil-list li:nth-child(1) { animation-delay: 0.2s; }
+.perfil-list li:nth-child(2) { animation-delay: 0.4s; }
+.perfil-list li:nth-child(3) { animation-delay: 0.6s; }
+.perfil-list li:nth-child(4) { animation-delay: 0.8s; }
 
-@keyframes fadeList {
+@keyframes appear {
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* Responsivo — se pone uno abajo del otro */
-@media (max-width: 768px) {
-  .about-perfil {
-    flex-direction: column;
-    align-items: center;
-  }
+
+
+/*Contacto*/
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  animation: fadeInDown 0.8s ease;
 }
 
+/* Tarjetita de datos con animación */
+.contact-card {
+  background: #ffffffc9;
+  backdrop-filter: blur(4px);
+  border-left: 4px solid #6f42c1;
+  animation: fadeIn 1s ease;
+}
 
-/*index */
+/* Animaciones como las usamos en About */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px);}
+  to { opacity: 1; transform: translateY(0);}
+}
 
-.bloque {
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.contact-card li {
+  font-size: 1.1rem;
+  animation: fadeIn 1s ease;
+}
+/*Footer*/
+.footer {
+  background: #f5f0ff;
+  border-top: 2px solid #b287f5;
+  animation: fadeIn 1s ease;
+}
+
+.footer-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #6a2dbf;
+  animation: fadeInDown 0.8s ease;
+}
+
+.footer-contact p a {
+  color: #4b1f9c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-contact p a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #a8a5a5;
+}
+
+/*Botones Flotantes*/
+/* CONTENEDOR */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
 }
 
-.caja-carrusel {
-  width: 300px; 
-  height: 300px;
+/* ESTILO BASE PARA ICONOS */
+.floating-buttons a img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: transform .3s ease, box-shadow .3s ease;
+  animation: popIn .8s ease;
 }
 
-#carouselExample {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 12px;
+/* HOVER ANIMACIÓN */
+.floating-buttons a img:hover {
+  transform: scale(1.12);
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.3);
 }
 
-#carouselExample img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* ANIMACIÓN SUAVE DE APARICIÓN */
+@keyframes popIn {
+  from { transform: scale(0.4); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
-/* Aside */
-.skills ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* WHATSAPP COLOR */
+.float-wsp img {
+  background: #25D366;
 }
 
-.skills li {
-  background: #861e82;
-  color: #fff;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-
-  opacity: 0;
-  transform: translateX(20px);
-  animation: fadeList .6s ease forwards;
+/* EMAIL COLOR */
+.float-mail img {
+  background: #b287f5;
 }
 
-/* Delays animados, uno por uno */
-.skills li:nth-child(1) { animation-delay: .2s; }
-.skills li:nth-child(2) { animation-delay: .4s; }
-.skills li:nth-child(3) { animation-delay: .6s; }
-
-@keyframes fadeList {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* ----------- MOBILE ----------- */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #222;
-    width: 200px;
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-    display: none; /* Oculto por defecto */
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
 
